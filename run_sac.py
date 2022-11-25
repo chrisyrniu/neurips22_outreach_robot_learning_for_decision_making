@@ -5,7 +5,6 @@ import pprint
 
 import numpy as np
 import torch
-from mujoco_env import make_mujoco_env
 from torch.utils.tensorboard import SummaryWriter
 
 from tianshou.data import Collector, ReplayBuffer, VectorReplayBuffer
@@ -14,6 +13,7 @@ from tianshou.trainer import offpolicy_trainer
 from tianshou.utils import TensorboardLogger, WandbLogger
 from tianshou.utils.net.common import Net
 from tianshou.utils.net.continuous import ActorProb, Critic
+from utils import make_mujoco_env
 
 
 def get_args():
