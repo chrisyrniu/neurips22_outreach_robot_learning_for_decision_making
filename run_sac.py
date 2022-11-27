@@ -141,7 +141,7 @@ def run_sac(args=get_args()):
     # log
     now = datetime.datetime.now().strftime("%y%m%d-%H%M%S")
     args.algo_name = "sac"
-    log_name = os.path.join(args.task, args.algo_name, str(args.seed), now)
+    log_name = os.path.join(args.task, f'lr{args.actor_lr}_epoch{args.epoch}_{now}')
     log_path = os.path.join(args.logdir, log_name)
 
     # logger
